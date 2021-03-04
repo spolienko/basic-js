@@ -1,5 +1,3 @@
-const CustomError = require("../extensions/custom-error");
-
 class VigenereCipheringMachine {
     constructor(direct) {
         if (direct === undefined || direct === true) {
@@ -71,12 +69,12 @@ class VigenereCipheringMachine {
                 continue;
         }
         if (this.direct === false)
-        result = this.reverseString(result);
+            result = this.reverseString(result);
         return result;
     }
 
     reverseString(str) {
-      return str.split('').reverse().join('');
+        return str.split('').reverse().join('');
     }
 
     insertString(str, index, value) {
